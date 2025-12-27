@@ -19,16 +19,6 @@ struct PlayerDetailView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 12) {
-                AsyncImage(url: player.imageURL) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image.resizable().aspectRatio(contentMode: .fill)
-                    default:
-                        Color.gray.opacity(0.2)
-                    }
-                }
-                .frame(width: 64, height: 64)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
                 Text(player.flag)
                     .font(.largeTitle)
                 VStack(alignment: .leading, spacing: 4) {
@@ -97,22 +87,24 @@ private struct SettingsCard: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
-                .fill(LinearGradient(colors: [.blue.opacity(0.85), .purple.opacity(0.9)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .fill(Color(uiColor: .secondarySystemGroupedBackground))
+                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
             VStack(alignment: .leading, spacing: 12) {
                 Text(title)
                     .font(.headline)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Color.accentColor)
                 ForEach(items, id: \.0) { item in
                     HStack {
                         Text(item.0)
+                            .foregroundStyle(.primary)
                         Spacer()
                         Text(item.1)
+                            .foregroundStyle(.secondary)
                     }
-                    .foregroundStyle(.white)
                     .font(.subheadline)
                 }
             }
-            .padding()
+            .padding(16)
         }
         .padding(.horizontal)
     }

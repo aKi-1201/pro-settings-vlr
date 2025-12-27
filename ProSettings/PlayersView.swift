@@ -24,7 +24,7 @@ struct PlayerRow: View {
     let player: Player
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 16) {
             AsyncImage(url: player.imageURL) { phase in
                 switch phase {
                 case .success(let image):
@@ -35,6 +35,7 @@ struct PlayerRow: View {
             }
             .frame(width: 50, height: 50)
             .clipShape(Circle())
+            .overlay(Circle().stroke(Color.gray.opacity(0.3), lineWidth: 1))
             Text(player.flag)
                 .font(.largeTitle)
             VStack(alignment: .leading, spacing: 4) {
@@ -51,6 +52,7 @@ struct PlayerRow: View {
                     .foregroundStyle(.secondary)
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 8)
+        .padding(.horizontal, 4)
     }
 }

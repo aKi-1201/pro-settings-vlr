@@ -46,14 +46,16 @@ extension Player {
         Player(name: "t3xture", team: "GenG", countryCode: "KR", role: "Duelist", popularity: 89, settings: .init(sensitivity: 0.45, dpi: 800, hz: 1000, scopeSensitivity: 1.0)),
         Player(name: "Boaster", team: "Fnatic", countryCode: "GB", role: "Controller", popularity: 89, settings: .init(sensitivity: 0.24, dpi: 800, hz: 1000, scopeSensitivity: 1.0)),
         Player(name: "kaajak", team: "Fnatic", countryCode: "PL", role: "Duelist", popularity: 89, settings: .init(sensitivity: 0.1, dpi: 1600, hz: 4000, scopeSensitivity: 1.0)),
-        Player(name: "Alfajer", team: "Fnatic", countryCode: "TR", role: "Sentinel", popularity: 93, settings: .init(sensitivity: 0.45, dpi: 800, hz: 1000, scopeSensitivity: 1.0)),
+        Player(name: "Alfajer", team: "Fnatic", countryCode: "TR", role: "Sentinel", popularity: 93, settings: .init(sensitivity: 0.45, dpi: 400, hz: 1000, scopeSensitivity: 1.0)),
         Player(name: "s0m", team: "NRG", countryCode: "US", role: "Controller", popularity: 89, settings: .init(sensitivity: 0.8, dpi: 400, hz: 1000, scopeSensitivity: 1.0)),
         Player(name: "nAts", team: "Team Liquid", countryCode: "RU", role: "Sentinel", popularity: 89, settings: .init(sensitivity: 0.49, dpi: 800, hz: 1000, scopeSensitivity: 1.0)),
-        Player(name: "Zekken", team: "MIBR", countryCode: "US", role: "Flex", popularity: 89, settings: .init(sensitivity: 0.175, dpi: 1600, hz: 1000, scopeSensitivity: 0.8)),
+        Player(name: "zekken", team: "MIBR", countryCode: "US", role: "Flex", popularity: 89, settings: .init(sensitivity: 0.175, dpi: 1600, hz: 1000, scopeSensitivity: 0.8)),
         Player(name: "happywei", team: "XLG", countryCode: "TW", role: "Sentinel", popularity: 89, settings: .init(sensitivity: 0.712, dpi: 800, hz: 1000, scopeSensitivity: 1.15)),
         Player(name: "yay", team: "LFT", countryCode: "US", role: "Sentinel", popularity: 89, settings: .init(sensitivity: 0.38, dpi: 800, hz: 1000, scopeSensitivity: 0.8)),
         Player(name: "brawk", team: "NRG", countryCode: "US", role: "Initiator", popularity: 89, settings: .init(sensitivity: 0.2, dpi: 800, hz: 1000, scopeSensitivity: 1.0)),
         Player(name: "Chronicle", team: "Team Vitality", countryCode: "RU", role: "Initiator", popularity: 89, settings: .init(sensitivity: 0.125, dpi: 1600, hz: 1000, scopeSensitivity: 0.95)),
+        Player(name: "Leo", team: "Fnatic", countryCode: "SE", role: "Initiator", popularity: 89, settings: .init(sensitivity: 0.41, dpi: 400, hz: 1000, scopeSensitivity: 1.0)),
+        Player(name: "Meteor", team: "T1", countryCode: "KR", role: "Flex", popularity: 89, settings: .init(sensitivity: 0.3, dpi: 800, hz: 4000, scopeSensitivity: 1.3))
     ]
 
     static let top100: [Player] = basePlayers
