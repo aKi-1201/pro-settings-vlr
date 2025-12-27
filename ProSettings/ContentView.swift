@@ -12,14 +12,14 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            NavigationView {
+            NavigationStack {
                 HomeView(players: players)
             }
             .tabItem {
                 Label("首頁", systemImage: "house")
             }
             
-            NavigationView {
+            NavigationStack {
                 PlayersView(players: players)
             }
             .tabItem {
