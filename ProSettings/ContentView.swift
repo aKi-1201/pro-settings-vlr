@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let players = Player.top100
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            TabView {
+                HomeView(players: players)
+                    .tabItem {
+                        Label("首頁", systemImage: "house.fill")
+                    }
+                PlayersView(players: players)
+                    .tabItem {
+                        Label("選手", systemImage: "list.bullet")
+                    }
+            }
         }
-        .padding()
     }
 }
 
